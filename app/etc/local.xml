@@ -59,4 +59,62 @@
             </adminhtml>
         </routers>
     </admin>
+    <lightspeed>
+		
+		<global><!-- this is a read-only db connection and should have access to core_config_data, sales_flat_quote, and sales_flat_quote_item  -->
+			<connection>
+                <host><![CDATA[localhost]]></host>
+                <username><![CDATA[root]]></username>
+                <password><![CDATA[root]]></password>
+                <dbname><![CDATA[magento-demo]]></dbname>
+			</connection>
+			<multi_currency>0</multi_currency> <!-- defaults to false "0" -->
+			<request_path><![CDATA[/pagoda/framework-tests/magento-demo/]]></request_path> <!-- this will almost always be blank -->
+			<!--
+			  	Examples - If your base_url looks like:
+			  		http://www.tinybrick.com 				then 	'' 
+			  		http://www.tinybrick.com/tempstore 		then 	'/tempstore'
+			-->
+		</global>
+		
+		<session>
+			<type></type><!-- files|memcached|db; empty defaults to files -->
+			<!-- file -->
+			<path></path><!-- empty defaults to var/session -->
+			
+			<!-- memcached -->
+			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
+	  			<localhost><!-- name is arbitrary -->
+	  				<host><![CDATA[127.0.0.1]]></host>
+	  				<port><![CDATA[11211]]></port>
+	  				<persistent><![CDATA[1]]></persistent>
+	  			</localhost>
+	  		</servers>
+	  		
+	  		<!-- db -->
+	  		<connection>
+	            <host><![CDATA[127.0.0.1]]></host>
+	            <username><![CDATA[user]]></username>
+	            <password><![CDATA[password]]></password>
+	            <dbname><![CDATA[magento]]></dbname>
+	        </connection>
+		</session>
+		
+		<cache>
+			<type></type><!-- files|memcached; empty default to files, memcached is STRONGLY encouraged in environments where possible -->
+			
+			<!-- file -->
+			<path></path><!-- empty defaults to var/lightspeed -->
+			
+			<!-- memcached -->
+			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
+	  			<localhost><!-- name is arbitrary -->
+	  				<host><![CDATA[127.0.0.1]]></host>
+	  				<port><![CDATA[11211]]></port>
+	  				<persistent><![CDATA[1]]></persistent>
+	  			</localhost>
+	  		</servers>
+		</cache>
+		
+	</lightspeed>
 </config>

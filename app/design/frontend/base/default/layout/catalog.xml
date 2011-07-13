@@ -110,6 +110,12 @@ Category layered navigation layout
 -->
 
     <catalog_category_layered translate="label">
+        <reference name="root">
+          <action method="cachePage">
+              <expires></expires>
+              <disqualifiers>cart,loggedin,compare</disqualifiers>
+          </action>
+        </reference>
         <label>Catalog Category (Anchor)</label>
         <reference name="left">
             <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml"/>
@@ -147,6 +153,12 @@ Category layered navigation layout
     </catalog_category_layered>
 
     <catalog_category_layered_nochildren translate="label">
+        <reference name="root">
+          <action method="cachePage">
+              <expires></expires>
+              <disqualifiers>cart,loggedin,compare</disqualifiers>
+          </action>
+        </reference>
         <label>Catalog Category (Without Subcategories)</label>
         <remove name="right.reports.product.viewed" />
         <reference name="right">
@@ -184,6 +196,12 @@ Product view
 -->
 
     <catalog_product_view translate="label">
+        <reference name="root">
+          <action method="cachePage">
+              <expires></expires>
+              <disqualifiers>cart,loggedin,compare</disqualifiers>
+          </action>
+        </reference>
         <label>Catalog Product View (Any)</label>
         <!-- Mage_Catalog -->
         <reference name="root">

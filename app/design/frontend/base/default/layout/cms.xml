@@ -43,6 +43,12 @@ Default layout, loads most of the pages
     </default>
     
     <cms_page translate="label">
+        <reference name="root">
+          <action method="cachePage">
+              <expires></expires>
+              <disqualifiers>cart,loggedin,compare</disqualifiers>
+          </action>
+        </reference>
         <label>CMS Pages (All)</label>
         <reference name="content">
             <block type="core/template" name="page_content_heading" template="cms/content_heading.phtml"/>
