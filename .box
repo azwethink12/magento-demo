@@ -12,5 +12,3 @@ php_extensions:
     - inconv
     - curl
     - soap
-    
-default_gateway: lightspeed.php
