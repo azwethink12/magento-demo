@@ -49,6 +49,10 @@
             </default_setup>
         </resources>
         <session_save><![CDATA[files]]></session_save>
+        <cache>
+            <backend>apc</backend>
+            <prefix>alphanumeric</prefix>
+        </cache>
     </global>
     <admin>
         <routers>
