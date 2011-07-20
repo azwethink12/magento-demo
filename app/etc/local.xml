@@ -49,6 +49,9 @@
             </default_setup>
         </resources>
         <session_save><![CDATA[files]]></session_save>
+        <cache>
+            <backend>apc</backend>
+        </cache>
     </global>
     <admin>
         <routers>
