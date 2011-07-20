@@ -13,5 +13,3 @@ php_extensions:
     - curl
     - soap
     - apc
-    
-default_gateway: lightspeed.php
