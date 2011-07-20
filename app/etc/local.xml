@@ -51,7 +51,7 @@
         <session_save><![CDATA[files]]></session_save>
         <cache>
             <backend>apc</backend>
-            <prefix>alphanumeric</prefix>
+            <prefix>MAGE_</prefix>
         </cache>
     </global>
     <admin>
