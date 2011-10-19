@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost;unix_socket=/tmp/mysql/clemmie.sock]]></host>
-                    <username><![CDATA[briana]]></username>
-                    <password><![CDATA[mLhiztWM]]></password>
-                    <dbname><![CDATA[clemmie]]></dbname>
+                    <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
+                    <username><![CDATA[bettina]]></username>
+                    <password><![CDATA[eN3I0RyB]]></password>
+                    <dbname><![CDATA[lyndsey]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
