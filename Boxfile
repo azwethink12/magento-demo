@@ -1,0 +1,19 @@
+web1:
+  name:magento
+    shared_writable_dirs:
+      - media
+      - var
+ 
+  php_extensions:
+      - pdo_mysql
+      - simplexml
+      - mcrypt
+      - hash
+      - gd
+      - dom
+      - inconv
+      - curl
+      - soap
+      - apc
+    
+  default_gateway: lightspeed.php
