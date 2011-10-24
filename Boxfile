@@ -1,5 +1,5 @@
 web1:
-  name:magento
+    name:magento
     shared_writable_dirs:
       - media
       - var
