@@ -16,4 +16,4 @@ web1:
       - soap
       - apc
     
-  default_gateway: lightspeed.php
+  # default_gateway: lightspeed.php
