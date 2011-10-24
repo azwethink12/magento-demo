@@ -25,11 +25,11 @@
 
 
 // To enable debugging, uncomment the following
-// error_reporting(E_ALL | E_STRICT);
-// ini_set('display_errors', 1);
-// require_once 'app/Mage.php';
-// Mage::setIsDeveloperMode(true);
-// ini_set('display_errors', 1);
+error_reporting(E_ALL | E_STRICT);
+ini_set('display_errors', 1);
+require_once 'app/Mage.php';
+Mage::setIsDeveloperMode(true);
+ini_set('display_errors', 1);
 
 if(!PageCache::doYourThing()){
 	include_once('index.php');
