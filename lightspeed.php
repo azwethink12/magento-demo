@@ -213,6 +213,9 @@ class PageCache
 			$key .= '_' . self::getCurrencyCode();
 		}
 		
+		print_r ($_SERVER['SERVER_NAME']);
+		exit;
+		
 		self::report("attempting to fetch url: $key");
 		if($data = self::get($key)){
 			if(self::messageExists()){
