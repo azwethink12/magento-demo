@@ -40,17 +40,16 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[tunnel.pagodabox.com]]></host>
-                    <port><![CDATA[3307]]></port>
-                    <username><![CDATA[laronda]]></username>
-                    <password><![CDATA[zSk68WMm]]></password>
-                    <dbname><![CDATA[cloud2]]></dbname>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[root]]></username>
+                    <password><![CDATA[root]]></password>
+                    <dbname><![CDATA[magento-demo]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
         </resources>
         <session_save><![CDATA[memcache]]></session_save> <!-- db / memcache / empty=files -->
-        <session_save_path><![CDATA[tcp://tunnel.pagodabox.com:11211?persistent=1&weight=2&timeout=10&retry_interval=10]]></session_save_path><!-- e.g. for memcache session save handler tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10 -->
+        <session_save_path><![CDATA[tcp://localhost:11211?persistent=1&weight=2&timeout=10&retry_interval=10]]></session_save_path><!-- e.g. for memcache session save handler tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10 -->
         <session_cache_limiter><![CDATA[]]></session_cache_limiter><!-- see http://php.net/manual/en/function.session-cache-limiter.php#82174 for possible values -->
         <cache>
             <backend>memcache</backend><!-- apc / memcached / xcache / empty=file -->
@@ -60,7 +59,7 @@
             <memcached><!-- memcached cache backend related config -->
                 <servers><!-- any number of server nodes can be included -->
                     <server>
-                        <host><![CDATA[tunnel.pagodabox.com]]></host>
+                        <host><![CDATA[localhost]]></host>
                         <port><![CDATA[11211]]></port>
                         <persistent><![CDATA[1]]></persistent>
                         <weight><![CDATA[2]]></weight>
@@ -90,11 +89,10 @@
 		
 		<global><!-- this is a read-only db connection and should have access to core_config_data, sales_flat_quote, and sales_flat_quote_item  -->
 			<connection>
-                <host><![CDATA[tunnel.pagodabox.com]]></host>
-                <port><![CDATA[3307]]></port>
-                <username><![CDATA[laronda]]></username>
-                <password><![CDATA[zSk68WMm]]></password>
-                <dbname><![CDATA[cloud2]]></dbname>
+                <host><![CDATA[localhost]]></host>
+                <username><![CDATA[root]]></username>
+                <password><![CDATA[root]]></password>
+                <dbname><![CDATA[magento-demo]]></dbname>
 			</connection>
 			<multi_currency>0</multi_currency> <!-- defaults to false "0" -->
 			<request_path><![CDATA[]]></request_path> <!-- this will almost always be blank -->
@@ -113,7 +111,7 @@
 			<!-- memcached -->
 			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
 	  			<localhost><!-- name is arbitrary -->
-	  				<host><![CDATA[tunnel.pagodabox.com]]></host>
+	  				<host><![CDATA[localhost]]></host>
 	  				<port><![CDATA[11211]]></port>
 	  				<persistent><![CDATA[1]]></persistent>
 	  			</localhost>
@@ -121,11 +119,10 @@
 	  		
 	  		<!-- db -->
 	  		<connection>
-                <host><![CDATA[tunnel.pagodabox.com]]></host>
-                <port><![CDATA[3307]]></port>
-                <username><![CDATA[laronda]]></username>
-                <password><![CDATA[zSk68WMm]]></password>
-                <dbname><![CDATA[cloud2]]></dbname>
+                <host><![CDATA[localhost]]></host>
+                <username><![CDATA[root]]></username>
+                <password><![CDATA[root]]></password>
+                <dbname><![CDATA[magento-demo]]></dbname>
 	        </connection>
 		</session>
 		
@@ -138,7 +135,7 @@
 			<!-- memcached -->
 			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
 	  			<localhost><!-- name is arbitrary -->
-	  				<host><![CDATA[tunnel.pagodabox.com]]></host>
+	  				<host><![CDATA[localhost]]></host>
 	  				<port><![CDATA[11211]]></port>
 	  				<persistent><![CDATA[1]]></persistent>
 	  			</localhost>
