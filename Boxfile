@@ -14,4 +14,4 @@ web1: #component type & number
     - curl
     - soap
     - mysqli
-   invalid yaml default_gateway: lightspeed.php
+  default_gateway: lightspeed.php
