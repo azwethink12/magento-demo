@@ -40,7 +40,7 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
+                    <host><![CDATA[tunnel.pagodabox.com]]></host>
                     <port><![CDATA[3306]]></port>
                     <username><![CDATA[hertha]]></username>
                     <password><![CDATA[lMImYd9B]]></password>
