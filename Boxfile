@@ -4,7 +4,7 @@ web1:
       - media
       - var
  
-  php_extensions:
+    php_extensions:
       - pdo_mysql
       - simplexml
       - mcrypt
@@ -15,5 +15,5 @@ web1:
       - curl
       - soap
       - apc
-    
-  # default_gateway: lightspeed.php
+
+    default_gateway: lightspeed.php
