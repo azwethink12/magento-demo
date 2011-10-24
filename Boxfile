@@ -13,5 +13,5 @@ web1: #component type & number
     - inconv
     - curl
     - soap
-    - mysqli
+    # - mysqli
   default_gateway: lightspeed.php
