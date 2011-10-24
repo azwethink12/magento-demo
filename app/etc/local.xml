@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[root]]></username>
-                    <password><![CDATA[root]]></password>
-                    <dbname><![CDATA[magento-demo]]></dbname>
+                    <host><![CDATA[localhost;unix_socket=/tmp/mysql/clemmie.sock]]></host>
+                    <username><![CDATA[briana]]></username>
+                    <password><![CDATA[mLhiztWM]]></password>
+                    <dbname><![CDATA[clemmie]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
