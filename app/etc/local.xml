@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost;unix_socket=/tmp/mysql/cherish.sock]]></host>
-                    <username><![CDATA[denisha]]></username>
-                    <password><![CDATA[GgDCcyun]]></password>
-                    <dbname><![CDATA[cherish]]></dbname>
+                    <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
+                    <username><![CDATA[hertha]]></username>
+                    <password><![CDATA[lMImYd9B]]></password>
+                    <dbname><![CDATA[magento]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
@@ -63,10 +63,10 @@
 		
 		<global><!-- this is a read-only db connection and should have access to core_config_data, sales_flat_quote, and sales_flat_quote_item  -->
 			<connection>
-                <host><![CDATA[localhost;unix_socket=/tmp/mysql/cherish.sock]]></host>
-                <username><![CDATA[denisha]]></username>
-                <password><![CDATA[GgDCcyun]]></password>
-                <dbname><![CDATA[cherish]]></dbname>
+        <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
+        <username><![CDATA[hertha]]></username>
+        <password><![CDATA[lMImYd9B]]></password>
+        <dbname><![CDATA[magento]]></dbname>
 			</connection>
 			<multi_currency>0</multi_currency> <!-- defaults to false "0" -->
 			<request_path><![CDATA[]]></request_path> <!-- this will almost always be blank -->
