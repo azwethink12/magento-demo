@@ -41,9 +41,9 @@
             <default_setup>
                 <connection>
                     <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
-                    <username><![CDATA[oma]]></username>
-                    <password><![CDATA[q57aLFtZ]]></password>
-                    <dbname><![CDATA[sharolyn]]></dbname>
+                    <username><![CDATA[bettina]]></username>
+                    <password><![CDATA[eN3I0RyB]]></password>
+                    <dbname><![CDATA[lyndsey]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
