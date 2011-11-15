@@ -668,8 +668,14 @@ final class Mage
             if (!empty($options['etc_dir'])) {
                 $etcDir = $options['etc_dir'];
             }
-
-            $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'local.xml';
+            if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX')
+			{
+              $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'live.xml';			
+			}
+			else
+			{
+              $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'local.xml';
+			}
 
             self::$_isInstalled = false;
 
