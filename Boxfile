@@ -3,6 +3,7 @@ web1:
   shared_writable_dirs:
     - media
     - var
+    - app/etc
   php_extensions:
     - pdo_mysql
     - simplexml
