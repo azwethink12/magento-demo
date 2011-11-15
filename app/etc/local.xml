@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[tunnel.pagodabox.com:3306]]></host>
-                    <username><![CDATA[bettina]]></username>
-                    <password><![CDATA[eN3I0RyB]]></password>
-                    <dbname><![CDATA[lyndsey]]></dbname>
+                    <host><![CDATA[tunnel.pagodabox.com:3307]]></host>
+                    <username><![CDATA[sierra]]></username>
+                    <password><![CDATA[oRAuK5Dv]]></password>
+                    <dbname><![CDATA[leonor]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
