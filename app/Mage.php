@@ -672,6 +672,7 @@ final class Mage
 			{
 			  echo ('Hi');
 			  exit;
+			  
 			}
             $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'local.xml';
 
