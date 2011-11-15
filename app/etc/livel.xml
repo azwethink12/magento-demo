@@ -40,7 +40,8 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[tunnel.pagodabox.com:3307]]></host>
+                    <host><![CDATA[tunnel.pagodabox.com]]></host>
+					<port><![CDATA[3307]]></port>
                     <username><![CDATA[sierra]]></username>
                     <password><![CDATA[oRAuK5Dv]]></password>
                     <dbname><![CDATA[leonor]]></dbname>
