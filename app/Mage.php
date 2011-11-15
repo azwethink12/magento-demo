@@ -670,11 +670,12 @@ final class Mage
             }
 			if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX')
 			{
-			  echo ('Hi');
-			  exit;
-			  
+              $localConfigFile = self::getRoot() . DS . $etcDir . 'live' . DS . 'local.xml';
 			}
-            $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'local.xml';
+			else
+			{
+              $localConfigFile = self::getRoot() . DS . $etcDir . DS . 'local.xml';
+			}
 
             self::$_isInstalled = false;
 

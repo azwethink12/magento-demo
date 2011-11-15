@@ -28,37 +28,33 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Wed, 13 Jul 2011 20:59:27 +0000]]></date>
+            <date>{{date}}</date>
         </install>
         <crypt>
-            <key><![CDATA[8d8e7f9af9e9916f0c33d86a71d438ac]]></key>
+            <key>{{key}}</key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
             <db>
-                <table_prefix><![CDATA[]]></table_prefix>
+                <table_prefix>{{db_prefix}}</table_prefix>
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[root]]></username>
-                    <password><![CDATA[]]></password>
-                    <dbname><![CDATA[magento-demo]]></dbname>
+                    <host>{{db_host}}</host>
+                    <username>{{db_user}}</username>
+                    <password>{{db_pass}}</password>
+                    <dbname>{{db_name}}</dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
         </resources>
-        <session_save><![CDATA[files]]></session_save>
-        <cache>
-            <backend>apc</backend>
-            <prefix>MAGE_</prefix>
-        </cache>
+        <session_save>{{session_save}}</session_save>
     </global>
     <admin>
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[admin]]></frontName>
+                    <frontName>{{admin_frontname}}</frontName>
                 </args>
             </adminhtml>
         </routers>

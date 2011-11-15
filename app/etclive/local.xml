@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[root]]></username>
-                    <password><![CDATA[]]></password>
-                    <dbname><![CDATA[magento-demo]]></dbname>
+                    <host><![CDATA[tunnel.pagodabox.com:3307]]></host>
+                    <username><![CDATA[sierra]]></username>
+                    <password><![CDATA[oRAuK5Dv]]></password>
+                    <dbname><![CDATA[leonor]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
