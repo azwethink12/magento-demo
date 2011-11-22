@@ -59,7 +59,7 @@
             <memcached><!-- memcached cache backend related config -->
                 <servers><!-- any number of server nodes can be included -->
                     <server>
-                        <host><![CDATA[localhost]]></host>
+                        <host><![CDATA[tunnel.pagodabox.com]]></host>
                         <port><![CDATA[11211]]></port>
                         <persistent><![CDATA[1]]></persistent>
                         <weight><![CDATA[2]]></weight>
