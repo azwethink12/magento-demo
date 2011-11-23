@@ -49,8 +49,43 @@
                 </connection>
             </default_setup>
         </resources>
-        <session_save><![CDATA[files]]></session_save>
-   </global>
+        <!-- db / memcache / empty=files -->
+        <session_save><![CDATA[memcache]]></session_save>
+        <!-- e.g. for memcache session save handler tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10 -->
+        <session_save_path><![CDATA[tcp://tunnel.pagodabox.com:11211?persistent=1&weight=2&timeout=10&retry_interval=10]]></session_save_path>
+        <!-- see http://php.net/manual/en/function.session-cache-limiter.php#82174 for possible values -->
+        <session_cache_limiter><![CDATA[]]></session_cache_limiter>
+        <cache>
+            <!-- apc / memcached / xcache / empty=file -->
+            <backend>memcache</backend>
+            <!-- database / file (default) - used for 2 levels cache setup, necessary for all shared memory storages -->
+            <slow_backend>File</slow_backend>
+            <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether store data in db slow cache backend -->
+            <slow_backend_store_data>0</slow_backend_store_data>
+            <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether refresh data in fast cache backend -->
+            <auto_refresh_fast_cache>0</auto_refresh_fast_cache>
+            <!-- memcached cache backend related config -->
+            <memcached>
+                <!-- any number of server nodes can be included -->
+                <servers>
+                    <server>
+                        <host><![CDATA[tunnel.pagodabox.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                        <weight><![CDATA[2]]></weight>
+                        <timeout><![CDATA[10]]></timeout>
+                        <retry_interval><![CDATA[10]]></retry_interval>
+                        <status><![CDATA[1]]></status>
+                    </server>
+                </servers>
+                <compression><![CDATA[0]]></compression>
+                <cache_dir><![CDATA[]]></cache_dir>
+                <hashed_directory_level><![CDATA[]]></hashed_directory_level>
+                <hashed_directory_umask><![CDATA[]]></hashed_directory_umask>
+                <file_name_prefix><![CDATA[]]></file_name_prefix>
+            </memcached>
+        </cache>
+    </global>
     <admin>
         <routers>
             <adminhtml>
