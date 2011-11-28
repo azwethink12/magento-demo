@@ -496,7 +496,7 @@ class PageCache
 							self::report("found the global db node");
 							if(self::useMySqli()){
 								//mysqli
-								self::$mysqlidatabase = mysqli_connect((string)$child2->connection->host, (string)$child2->connection->username, (string)$child2->connection->password);
+								self::$mysqlidatabase = mysqli_connect((string)$child2->connection->host, (string)$child2->connection->username, (string)$child2->connection->password, '', (int)$child2->connection->port);
 								mysqli_select_db(self::$mysqlidatabase, (string)$child2->connection->dbname);
 							}else{
 								//pdo
@@ -531,7 +531,7 @@ class PageCache
 								case 'db':
 									// self::report("session store is db");
 									self::$sessionType = 'db';
-									self::$sessionConfig['connection'] = mysqli_connect((string)$child2->connection->host, (string)$child2->connection->username, (string)$child2->connection->password);
+									self::$sessionConfig['connection'] = mysqli_connect((string)$child2->connection->host, (string)$child2->connection->username, (string)$child2->connection->password, '', (int)$child2->connection->port);
 									mysqli_select_db(self::$sessionConfig['connection'], (string)$child2->connection->dbname);
 									break;
 								case 'files':
