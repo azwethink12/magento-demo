@@ -13,3 +13,4 @@ web1:
     - inconv
     - curl
     - soap
+    - memcache
