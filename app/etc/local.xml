@@ -59,7 +59,7 @@
             <!-- apc / memcached / xcache / empty=file -->
             <backend>memcache</backend>
             <!-- database / file (default) - used for 2 levels cache setup, necessary for all shared memory storages -->
-            <slow_backend>File</slow_backend>
+            <slow_backend>database</slow_backend>
             <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether store data in db slow cache backend -->
             <slow_backend_store_data>0</slow_backend_store_data>
             <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether refresh data in fast cache backend -->
