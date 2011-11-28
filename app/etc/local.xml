@@ -53,7 +53,7 @@
         <session_save_path><![CDATA[tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10]]></session_save_path><!-- e.g. for memcache session save handler tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10 -->
         <session_cache_limiter><![CDATA[]]></session_cache_limiter><!-- see http://php.net/manual/en/function.session-cache-limiter.php#82174 for possible values -->
         <cache>
-            <backend>memcached</backend><!-- apc / memcached / xcache / empty=file -->
+            <backend>memcache</backend><!-- apc / memcached / xcache / empty=file -->
             <slow_backend></slow_backend> <!-- database / file (default) - used for 2 levels cache setup, necessary for all shared memory storages -->
             <slow_backend_store_data></slow_backend_store_data> <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether store data in db slow cache backend -->
             <auto_refresh_fast_cache></auto_refresh_fast_cache> <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether refresh data in fast cache backend -->
