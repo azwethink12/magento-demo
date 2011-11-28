@@ -49,7 +49,33 @@
                 </connection>
             </default_setup>
         </resources>
-        <session_save><![CDATA[files]]></session_save>
+        <session_save><![CDATA[memcache]]></session_save> <!-- db / memcache / empty=files -->
+        <session_save_path><![CDATA[tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10]]></session_save_path><!-- e.g. for memcache session save handler tcp://10.0.0.1:11211?persistent=1&weight=2&timeout=10&retry_interval=10 -->
+        <session_cache_limiter><![CDATA[]]></session_cache_limiter><!-- see http://php.net/manual/en/function.session-cache-limiter.php#82174 for possible values -->
+        <cache>
+            <backend>memcached</backend><!-- apc / memcached / xcache / empty=file -->
+            <slow_backend></slow_backend> <!-- database / file (default) - used for 2 levels cache setup, necessary for all shared memory storages -->
+            <slow_backend_store_data></slow_backend_store_data> <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether store data in db slow cache backend -->
+            <auto_refresh_fast_cache></auto_refresh_fast_cache> <!-- 1 / 0 (default) - used for 2 levels cache setup, sets whether refresh data in fast cache backend -->
+            <memcached><!-- memcached cache backend related config -->
+                <servers><!-- any number of server nodes can be included -->
+                    <server>
+                        <host><![CDATA[tunnel.pagodabox.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                        <weight><![CDATA[2]]></weight>
+                        <timeout><![CDATA[10]]></timeout>
+                        <retry_interval><![CDATA[10]]></retry_interval>
+                        <status><![CDATA[1]]></status>
+                    </server>
+                </servers>
+                <compression><![CDATA[0]]></compression>
+                <cache_dir><![CDATA[]]></cache_dir>
+                <hashed_directory_level><![CDATA[]]></hashed_directory_level>
+                <hashed_directory_umask><![CDATA[]]></hashed_directory_umask>
+                <file_name_prefix><![CDATA[]]></file_name_prefix>
+            </memcached>
+        </cache>
     </global>
     <admin>
         <routers>
@@ -80,14 +106,14 @@
 		</global>
 		
 		<session>
-			<type></type><!-- files|memcached|db; empty defaults to files -->
+			<type>memcached</type><!-- files|memcached|db; empty defaults to files -->
 			<!-- file -->
 			<path></path><!-- empty defaults to var/session -->
 			
 			<!-- memcached -->
 			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
 	  			<localhost><!-- name is arbitrary -->
-	  				<host><![CDATA[127.0.0.1]]></host>
+	  				<host><![CDATA[tunnel.pagodabox.com]]></host>
 	  				<port><![CDATA[11211]]></port>
 	  				<persistent><![CDATA[1]]></persistent>
 	  			</localhost>
@@ -95,15 +121,16 @@
 	  		
 	  		<!-- db -->
 	  		<connection>
-	            <host><![CDATA[127.0.0.1]]></host>
-	            <username><![CDATA[user]]></username>
-	            <password><![CDATA[password]]></password>
-	            <dbname><![CDATA[magento]]></dbname>
+                <host><![CDATA[tunnel.pagodabox.com]]></host>
+                <port><![CDATA[3307]]></port>
+                <username><![CDATA[laronda]]></username>
+                <password><![CDATA[zSk68WMm]]></password>
+                <dbname><![CDATA[cloud2]]></dbname>
 	        </connection>
 		</session>
 		
 		<cache>
-			<type></type><!-- files|memcached; empty default to files, memcached is STRONGLY encouraged in environments where possible -->
+			<type>memcached</type><!-- files|memcached; empty default to files, memcached is STRONGLY encouraged in environments where possible -->
 			
 			<!-- file -->
 			<path></path><!-- empty defaults to var/lightspeed -->
@@ -111,7 +138,7 @@
 			<!-- memcached -->
 			<servers> <!-- can use multiple servers in a federated, distributed cluster -->
 	  			<localhost><!-- name is arbitrary -->
-	  				<host><![CDATA[127.0.0.1]]></host>
+	  				<host><![CDATA[tunnel.pagodabox.com]]></host>
 	  				<port><![CDATA[11211]]></port>
 	  				<persistent><![CDATA[1]]></persistent>
 	  			</localhost>
