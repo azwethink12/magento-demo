@@ -42,9 +42,9 @@
                 <connection>
                     <host><![CDATA[tunnel.pagodabox.com]]></host>
                     <port><![CDATA[3307]]></port>
-                    <username><![CDATA[sierra]]></username>
-                    <password><![CDATA[oRAuK5Dv]]></password>
-                    <dbname><![CDATA[leonor]]></dbname>
+                    <username><![CDATA[chloe]]></username>
+                    <password><![CDATA[hDtCgYUH]]></password>
+                    <dbname><![CDATA[tamera]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
