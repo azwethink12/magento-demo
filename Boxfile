@@ -10,7 +10,7 @@ web1: #component type & number
     - hash
     - gd
     - dom
-    - inconv
+    - iconv
     - curl
     - soap
     - mysqli
