@@ -41,6 +41,7 @@
             <default_setup>
                 <connection>
                     <host><![CDATA[tunnel.pagodabox.com]]></host>
+                    <port><![CDATA[3306]]></port>
                     <username><![CDATA[hertha]]></username>
                     <password><![CDATA[lMImYd9B]]></password>
                     <dbname><![CDATA[magento]]></dbname>
@@ -90,6 +91,7 @@
 		<global><!-- this is a read-only db connection and should have access to core_config_data, sales_flat_quote, and sales_flat_quote_item  -->
 			<connection>
                 <host><![CDATA[tunnel.pagodabox.com]]></host>
+                <port><![CDATA[3306]]></port>
                 <username><![CDATA[hertha]]></username>
                 <password><![CDATA[lMImYd9B]]></password>
                 <dbname><![CDATA[magento]]></dbname>
@@ -120,6 +122,7 @@
 	  		<!-- db -->
 	  		<connection>
                 <host><![CDATA[tunnel.pagodabox.com]]></host>
+                <port><![CDATA[3306]]></port>
                 <username><![CDATA[hertha]]></username>
                 <password><![CDATA[lMImYd9B]]></password>
                 <dbname><![CDATA[magento]]></dbname>
