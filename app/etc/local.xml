@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[root]]></password>
-                    <dbname><![CDATA[magento-demo]]></dbname>
+                    <dbname><![CDATA[demo-magento]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
@@ -92,7 +92,7 @@
                 <host><![CDATA[localhost]]></host>
                 <username><![CDATA[root]]></username>
                 <password><![CDATA[root]]></password>
-                <dbname><![CDATA[magento-demo]]></dbname>
+                <dbname><![CDATA[demo-magento]]></dbname>
 			</connection>
 			<multi_currency>0</multi_currency> <!-- defaults to false "0" -->
 			<request_path><![CDATA[]]></request_path> <!-- this will almost always be blank -->
@@ -122,7 +122,7 @@
                 <host><![CDATA[localhost]]></host>
                 <username><![CDATA[root]]></username>
                 <password><![CDATA[root]]></password>
-                <dbname><![CDATA[magento-demo]]></dbname>
+                <dbname><![CDATA[demo-magento]]></dbname>
 	        </connection>
 		</session>
 		
